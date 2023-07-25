@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Autocomplete from './Autocomplete';
 
 type YearAutocompleteProps = {
   minYear: number;
@@ -6,10 +7,16 @@ type YearAutocompleteProps = {
 }
 
 const YearAutocomplete = ({ minYear, maxYear }: YearAutocompleteProps) => {
-//   return (
-//     <input
-//
-//     );
+  const [selectedYear, setSelectedYear] = useState<string>('');
+
+  return (
+    <Autocomplete
+      inputName="test"
+      placeholder="Select year"
+      onSelect={(optionValue) => setSelectedYear(optionValue.toString())}
+      options={[2019, 2020, 2021]}
+    />
+  );
 };
 
 export default YearAutocomplete;
