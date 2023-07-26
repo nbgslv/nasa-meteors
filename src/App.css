@@ -1,38 +1,95 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #181c2b;
+  width: 100vw;
+  height: 100vh;
+  color: #eeeeee;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  width: 95%;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.5rem;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  border-bottom: 1px solid #fff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App__card {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 500px;
+  background-color: #1d2136;
+  border: 1px solid #181c2b;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 2px 8px 0;
+}
+
+.App__card__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.App__card__content {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.App__year__input {
+  margin-top: 20px;
+}
+
+.App__data__wrapper {
+  margin-top: 20px;
+}
+
+.meteorites__number {
+  margin-top: 5px;
+  font-weight: 100;
+}
+
+.App__mass__input {
+  margin-top: 20px;
+}
+
+.App__alert {
+  position: relative;
+  margin-top: 20px;
+  background-color: #eeeeee;
+  color: #ff0000;
+  font-size: 1.2rem;
+  font-weight: 800;
+  max-width: 500px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 2px 8px 0;
+}
+
+.App__alert__close {
+  position: absolute;
+  right: 6px;
+  top: 1px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 800;
 }

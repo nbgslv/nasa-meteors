@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import Autocomplete from './Autocomplete';
 
 type YearAutocompleteProps = {
-  minYear: number;
-  maxYear: number;
+  yearsArray: number[];
+  forceValue: string;
+  setOption: Dispatch<SetStateAction<number>>;
 }
 
-const YearAutocomplete = ({ minYear, maxYear }: YearAutocompleteProps) => {
-  const [selectedYear, setSelectedYear] = useState<string>('');
-
-  return (
-    <Autocomplete
-      inputName="test"
-      placeholder="Select year"
-      onSelect={(optionValue) => setSelectedYear(optionValue.toString())}
-      options={[2019, 2020, 2021]}
-    />
-  );
-};
+const YearAutocomplete = ({ yearsArray, forceValue, setOption }: YearAutocompleteProps) => (
+  <Autocomplete
+    inputName="year"
+    placeholder="Select year"
+    forceValue={forceValue?.toString()}
+    onSelect={(optionValue) => setOption(optionValue as number)}
+    options={yearsArray}
+  />
+);
 
 export default YearAutocomplete;
